@@ -1,0 +1,11 @@
+applications:
+- name: sn-task-sink
+  disk_quota: 1G
+  health-check-type: none
+  path: ./target/sn-task-sink-0.0.1-SNAPSHOT.jar
+  instances: 1
+  memory: 1G
+  no-route: true
+  services:
+  - df-rabbitmq
+  stack: cflinuxfs2
